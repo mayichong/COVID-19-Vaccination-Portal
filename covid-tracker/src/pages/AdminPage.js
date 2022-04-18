@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import Input from "@mui/material/Input";
-import InputLabel from "@mui/material/InputLabel";
-import InputAdornment from "@mui/material/InputAdornment";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import LockIcon from "@mui/icons-material/Lock";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Formik, Form } from "formik";
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { useNavigate } from 'react-router-dom';
-import * as Yup from 'yup';
 
 function AdminPage(props) {
+
 
   //  Counter is a state initialized to 0
   const [counter, setCounter] = useState(0)
@@ -56,6 +51,7 @@ function AdminPage(props) {
         alert(`added successfully!`)
     window.location.reload();
 }
+
 
     return (      
       <>
@@ -115,8 +111,6 @@ function AdminPage(props) {
 )}
   </Formik>
 
-
-     
       </div>
       </>
         
