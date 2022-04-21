@@ -67,7 +67,7 @@ function AdminPage(props) {
                     }}
                 >{({ values, handleChange, handleSubmit}) => (
                   <Form onSubmit={handleSubmit}>
-                  <InputLabel style={{color:"orange" , fontSize:'16pt'}}>Vaccine Name</InputLabel>
+                  <InputLabel requried style={{color:"orange" , fontSize:'16pt'}}>Vaccine Name</InputLabel>
                   <Input
                   name="name"
                   onChange={(e) => { handleChange(e) }}
@@ -108,13 +108,17 @@ function AdminPage(props) {
             onClick={handleClick2}>-</Button>
                   <div className="space40"></div>
                   <Button variant="contained" type="submit"> Submit</Button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <Button variant="contained" component={Link} to="/AdminLogin">Back</Button>
                 </Form>
 )}
+
+
   </Formik>
 
       </div>
       </>
-        
+
 
     )
 }

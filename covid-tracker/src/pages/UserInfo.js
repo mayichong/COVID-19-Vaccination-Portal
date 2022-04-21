@@ -84,7 +84,7 @@ function UserInfo(props) {
         // vaccine = <>{props.vaccine}</>
     } else {
 
-        logout = <Button color="inherit" component={Link} to="/login" onClick={logOut}>log out</Button>
+        logout = <Button id="mlogout" color="inherit" component={Link} to="/login" onClick={logOut}>log out</Button>
         // vaccine = <Button color="inherit" component={Link} to="/Certificate" onClick={logOut}>log out</Button>
     }
 
@@ -95,7 +95,7 @@ function UserInfo(props) {
             <div className="space40">State: {props.state}</div>
             <div className="space40">Zip Code: {props.zipCode}</div>
             <div className="space40"></div>
-            <Button variant="outlined" onClick={handleClickOpen}>
+            <Button id="cancel" variant="outlined" onClick={handleClickOpen}>
                 Cancel Appointment
             </Button>
             <Dialog
@@ -109,7 +109,7 @@ function UserInfo(props) {
                 </DialogTitle>
 
                 <DialogActions>
-                    <Button onClick={deleteBooking}>
+                    <Button id="yescancel" onClick={deleteBooking}>
                         Yes
                     </Button>
                     <Button onClick={handleClose}>No</Button>
@@ -169,7 +169,7 @@ function UserInfo(props) {
                             <Item>
                                 <h3>What would you like to do?</h3>
                                 <div className="space40"></div>
-                                <Button variant="contained" component={Link}
+                                <Button id="mappointment" variant="contained" component={Link}
                                     to="/list">Schedule an Appointment </Button>
                                 <div className="space40" ></div>
                                 <Button variant="contained" component={Link}
